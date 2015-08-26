@@ -46,4 +46,20 @@ module Methods
 		end
 	end
 
+	def diff21(n)
+		if (n <= 21)
+			(n - 21).abs
+		else
+			((n - 21) * 2).abs
+		end
+	end
+
+	def parrot_trouble?(n)
+		if (n < 6 || n > 16)
+			false
+		else
+			true
+		end
+	end
+
 end

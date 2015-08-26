@@ -38,4 +38,22 @@ class MethodsTest < MiniTest::Test
   	assert_equal -16, @m.sum_double(-4, -4)
   end
 
+  def test_diff21
+    assert_equal 11, @m.diff21(10)
+    assert_equal 21, @m.diff21(0)
+    assert_equal 0, @m.diff21(21)
+    assert_equal 24, @m.diff21(33)
+    assert_equal 2, @m.diff21(22)
+  end 
+
+  def test_parrot_trouble
+    assert_equal true, @m.parrot_trouble?(4)
+    assert_equal true, @m.parrot_trouble?(5)
+    assert_equal true, @m.parrot_trouble?(17)
+    assert_equal true, @m.parrot_trouble?(18)
+    assert_equal false, @m.parrot_trouble?(6)
+    assert_equal false, @m.parrot_trouble?(13)
+    assert_equal false, @m.parrot_trouble?(16)
+  end
+
 end
